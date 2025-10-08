@@ -1,0 +1,110 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Основной контейнер страницы */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+header {
+    background-color: #333; /* цвет фона */
+    color: white;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 60%;
+    margin-top: 10px;
+    padding: 20px;
+}
+
+footer {
+    display: flex;
+    height: 20%;
+}
+
+/* NAV - контейнер для логотипа и меню */
+nav {
+    display: flex;                  /* включаем flex */
+    justify-content: space-between; /* логотип слева, меню справа */
+    align-items: center;            /* выравнивание по вертикали */
+    padding: 10px 20px;
+}
+
+/* Логотип */
+.logo img {
+    display: block;        /* убирает лишний отступ снизу */
+    height: 70px;
+    width: 50px;
+    object-fit: cover;     /* чтобы не искажалось */
+    border: 2px solid white;
+    border-radius: 15px;
+    padding: 3px;
+}
+
+/* Меню */
+ul {
+    display: flex;          /* пункты меню в ряд */
+    gap: 20px;              /* расстояние между пунктами */
+    list-style: none;       /* убираем точки */
+    margin: 0;
+    padding: 0;
+}
+
+ul li a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+ul li a:hover {
+    color: #ff9800; /* эффект при наведении */
+}
+
+
+/* чтобы контент не прилипал к шапке */
+
+.grid{
+    display: grid;
+    grid-template-areas:
+        "grid_item1 grid_item2"
+        "grid_item1 grid_item2"
+        "grid_item_rect grid_item_rect";
+
+    grid-template-columns: 1fr 1fr; /* две колонки */
+    gap: 10px; /* отступы между элементами */
+    border: 2px dashed rgba(16, 15, 15, 0.2);
+    text-align: center;
+    padding: 10px;
+
+    margin: 0 0;
+}
+
+.grid_item1{
+    grid-area: grid_item1;
+    background: rgba(0,0,0,0.05);
+    padding: 15px;
+    border-radius: 5px;
+
+}
+
+.grid_item2{
+    grid-area: grid_item2;
+    background: rgba(0,0,0,0.05);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.grid_item_rect{
+    grid-area: grid_item_rect;
+    background: rgba(0,0,0,0.05);
+    padding: 15px;
+    border-radius: 5px;
+}

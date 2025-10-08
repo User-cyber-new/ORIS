@@ -1,0 +1,77 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Основной контейнер страницы */
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* HEADER */
+header {
+    background-color: #333; /* цвет фона */
+    color: white;
+    width: 100%;
+}
+
+/* NAV - контейнер для логотипа и меню */
+nav {
+    display: flex;                  /* включаем flex */
+    justify-content: space-between; /* логотип слева, меню справа */
+    align-items: center;            /* выравнивание по вертикали */
+    padding: 10px 20px;
+}
+
+/* Логотип */
+.logo img {
+    display: block;        /* убирает лишний отступ снизу */
+    height: 70px;
+    width: 50px;
+    object-fit: cover;     /* чтобы не искажалось */
+    border: 2px solid white;
+    border-radius: 15px;
+    padding: 3px;
+}
+
+/* Меню */
+ul {
+    display: flex;          /* пункты меню в ряд */
+    gap: 20px;              /* расстояние между пунктами */
+    list-style: none;       /* убираем точки */
+    margin: 0;
+    padding: 0;
+}
+
+
+ul li a:hover {
+    color: #ff9800; /* эффект при наведении */
+}
+
+/* MAIN */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50%;
+    margin-top: 10px;
+    padding: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.container ul{
+    display: flex;
+    flex-direction: column; /* Заставляем элементы идти сверху вниз */
+    gap: 8px;               /* Расстояние между пунктами */
+    padding: 0;
+    margin: 20px;
+    list-style: none;       /* убираем маркеры, если не нужны */
+}
