@@ -177,7 +177,7 @@ nav.active {
 
 .grid_item1 {
     grid-area: grid_item1;
-    background-image: url("/semestr1/assets/images/course1/press_dynamic.jpg");
+    background-image: url("/semestr1/assets/images/course2/spina_static.jpg");
 
     background-repeat: no-repeat;         /* не повторять */
     background-size: contain;               /* заполнение блока, сохраняя пропорции */
