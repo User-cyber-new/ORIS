@@ -1,0 +1,186 @@
+.grid {
+    display: grid;
+    grid-template-areas:
+        "grid_item_header grid_item_header"
+        "grid_item grid_item"
+        "grid_item grid_item";
+    grid-template-columns: 1fr 1fr; /* две колонки */
+    gap: 10px; /* отступы между элементами */
+    border: 2px dashed rgba(16, 15, 15, 0.2);
+    text-align: center;
+    padding: 10px;
+
+    margin: 0 auto;
+}
+
+.grid_item_header {
+    grid-area: grid_item_header;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
+    background: rgba(0,0,0,0.05);
+    border-radius: 5px;
+}
+
+.grid_item {
+    background: rgba(0,0,0,0.05);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Основной контейнер страницы */
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* HEADER */
+header {
+    color: white;
+    width: 100%;
+}
+
+/* NAV - контейнер для логотипа и меню */
+.main-nav {
+    background-color: rgb(107, 107, 107, 0.8);/* цвет фона */
+    display: flex;                  /* включаем flex */
+    justify-content: space-between; /* логотип слева, меню справа */
+    align-items: center;            /* выравнивание по вертикали */
+    padding: 10px 20px;
+}
+
+.main-nav-change-bacground{
+    background-color: rgb(107, 107, 107);
+}
+
+/* Логотип */
+.main-logo img {
+    display: block;        /* убирает лишний отступ снизу */
+    height: 70px;
+    width: 50px;
+    object-fit: cover;     /* чтобы не искажалось */
+    border: 2px solid white;
+    border-radius: 15px;
+    padding: 3px;
+    cursor:pointer;
+}
+
+.enter-logo img{
+    height: 40px;
+    width: 40px;
+    object-fit: contain;
+    display: block;
+    background-color: rgba(107, 107, 107, 0.8);
+    border-radius: 1000%;
+    cursor:pointer;
+}
+
+/* Меню */
+ul {
+    display: flex;          /* пункты меню в ряд */
+    gap: 20px;              /* расстояние между пунктами */
+    list-style: none;       /* убираем точки */
+    margin: 0;
+    padding: 0;
+}
+
+ul li a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+ul li a:hover {
+    color: #ff9800; /* эффект при наведении */
+}
+
+#popup {
+    /* по умолчанию скрыто */
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+
+    /* центруем содержимое, но активируется только когда показываем попап */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Внутренний блок окна */
+.popup-content {
+    background: #5a5050;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Класс, скрывающий окно */
+.hidden {
+    display: none !important;
+}
+
+/* Класс для показа попапа: делает flex для центрирования */
+.show {
+    display: flex !important;
+}
+
+/* MAIN */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50%;
+    margin-top: 10px;
+    padding: 20px;
+}
+
+/* Когда меню активно */
+nav.active {
+    top: 40px; /* выезжает вниз на высоту триггера */
+}
+
+.enter-user ul {
+    display: flex;
+    flex-direction: column; /* элементы вертикально */
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%; /* чтобы форма растягивалась */
+}
+
+.enter-user li {
+    display: flex;             /* label и input в одну линию */
+    align-items: center;       /* по вертикали по центру */
+    justify-content: flex-start;
+    gap: 10px;                 /* расстояние между подписью и полем */
+    width: 100%;
+}
+
+.enter-user label {
+    width: 70px;              /* одинаковая ширина подписи */
+    text-align: right;         /* подпись выравнивается справа */
+    font-weight: bold;
+
+}
+
+.enter-user input, button {
+    flex: 1;                   /* поле занимает всё оставшееся место */
+    height: 30px;              /* одинаковая высота */
+    padding: 5px 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;    /* чтобы padding не ломал ширину */
+}

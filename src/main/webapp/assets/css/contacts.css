@@ -1,0 +1,166 @@
+/* Сброс базовых стилей */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Основной контейнер страницы */
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* HEADER */
+header {
+    color: white;
+    width: 100%;
+}
+
+header ul li a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+header ul li a:hover {
+    color: #ff9800; /* эффект при наведении */
+}
+
+/* NAV - контейнер для логотипа и меню */
+.main-nav {
+    background-color: rgba(107, 107, 107, 0.8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.main-nav-change-bacground {
+    background-color: rgb(107, 107, 107);
+}
+
+/* Логотип */
+.main-logo img {
+    display: block;
+    height: 70px;
+    width: 50px;
+    object-fit: cover;
+    border: 2px solid white;
+    border-radius: 15px;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.enter-logo img {
+    height: 40px;
+    width: 40px;
+    object-fit: contain;
+    display: block;
+    background-color: rgba(107, 107, 107, 0.8);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Меню */
+ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Попап */
+#popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: #5a5050;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.show {
+    display: flex !important;
+}
+
+/* MAIN */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50%;
+    margin-top: 10px;
+    padding: 20px;
+}
+
+/* Меню при активном состоянии */
+nav.active {
+    top: 40px;
+}
+
+/* Форма входа */
+.enter-user ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.enter-user li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 100%;
+}
+
+.enter-user label {
+    width: 70px;
+    text-align: right;
+    font-weight: bold;
+}
+
+.enter-user input,
+button {
+    flex: 1;
+    height: 30px;
+    padding: 5px 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+
+
+/* Пример стиля для grid-item с фоном */
+.grid_item2 {
+    grid-area: grid_item2;
+    background-image: url("/semestr1/assets/images/course1/press_dynamic.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    padding: 15px;
+    border-radius: 5px;
+}
